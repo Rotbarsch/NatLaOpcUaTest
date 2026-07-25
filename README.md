@@ -9,7 +9,7 @@ It allows testers to write test cases in plain English, making it easier for non
 
 It uses the shared binding from [Rotbarsch.Reqnroll.BaseBindings](https://github.com/Rotbarsch/Rotbarsch.Reqnroll.BaseBindings) for variables etc. See there for further info.
 
-**TL;DR: A set of Reqnroll Bindings for writing REST API tests in Natural Language.**
+**TL;DR: A set of Reqnroll Bindings for writing OPC/UA API tests in Natural Language.**
 
 ## Minimal Usage Example
 ```
@@ -25,7 +25,7 @@ The common bindings (Assert, Variable operations, etc) are documented in the wik
 - **Natural Language**: Write tests in plain English, making them accessible to non-technical team members.
 - **Version control compatible**: Test cases can be easily managed and tracked using standard version control systems.
 - **Ease of Use**: Simplifies the process of creating and maintaining OPC/UA tests.
-- **Integration with Reqnroll**: Leverages the powerful features of Reqnroll and its various integrations for REST API testing.
+- **Integration with Reqnroll**: Leverages the powerful features of Reqnroll and its various integrations for OPC/UA API testing.
 - **Flexibility**: Easily adaptable to various OPC/UA testing scenarios.
 - **Ready for AI**: The natural language used for describing tests is well-suited for AI-driven test generation and analysis.
 
