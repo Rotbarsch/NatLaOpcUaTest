@@ -19,6 +19,7 @@ Then the value of 'firstNodeValue' equals 'Ok'
 ```
 
 See the NatLaOpcUaTest.Demo project for more usage examples or the full listing of [implemented bindings](https://github.com/Rotbarsch/NatLaOpcUaTest/wiki/Bindings).
+The common bindings (Assert, Variable operations, etc) are documented in the wiki of [Rotbarsch.Reqnroll.BaseBindings](https://github.com/Rotbarsch/Rotbarsch.Reqnroll.BaseBindings/wiki/Bindings).
 
 ## Advantages of using NatLaOpcUaTest
 - **Natural Language**: Write tests in plain English, making them accessible to non-technical team members.
