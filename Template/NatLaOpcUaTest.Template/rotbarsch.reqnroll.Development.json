@@ -1,0 +1,8 @@
+{
+  "globalVariables": [
+    {
+      "name": "stage",
+      "value": "Dev"
+    }
+  ]
+}

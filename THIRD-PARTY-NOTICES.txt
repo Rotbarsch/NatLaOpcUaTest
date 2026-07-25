@@ -1,0 +1,89 @@
+THIRD-PARTY SOFTWARE NOTICES AND INFORMATION
+---------------------------------------------
+
+
+This project depends on the following third-party software:
+
+=============================================================
+
+OPCFoundation.NetStandard.Opc.Ua.Client
+Copyright © OPCFoundation
+
+Licensed under the MIT License.
+https://github.com/OPCFoundation/UA-.NETStandard?tab=License-1-ov-file
+
+=============================================================
+
+Reqnroll
+Copyright © Reqnroll contributors
+
+Licensed under the BSD 3-Clause License.
+https://github.com/reqnroll/Reqnroll/blob/main/LICENSE
+
+=============================================================
+
+Reqnroll.NUnit
+Copyright © Reqnroll contributors
+
+Licensed under the BSD 3-Clause License.
+https://github.com/reqnroll/Reqnroll/blob/main/LICENSE
+
+=============================================================
+
+Reqnroll.Microsoft.Extensions.DependencyInjection
+Copyright © Reqnroll contributors
+
+Licensed under the BSD 3-Clause License.
+https://github.com/reqnroll/Reqnroll/blob/main/LICENSE
+
+=============================================================
+
+Microsoft.NET.Test.Sdk
+Copyright © Microsoft
+
+Licensed under the MIT License.
+https://github.com/microsoft/msbuild/blob/main/LICENSE.txt
+
+=============================================================
+
+NUnit3TestAdapter
+Copyright © NUnit contributors
+
+Licensed under the MIT License.
+https://github.com/nunit/nunit3-vs-adapter/blob/master/LICENSE.txt
+
+=============================================================
+
+Newtonsoft.Json
+Copyright © James Newton-King
+
+Licensed under the MIT License.
+https://github.com/JamesNK/Newtonsoft.Json/blob/master/LICENSE.md
+
+=============================================================
+
+
+NJsonSchema
+Copyright © Rico Suter
+
+Licensed under the MIT License.
+https://github.com/RicoSuter/NJsonSchema/blob/master/LICENSE.md
+
+=============================================================
+
+NUnit
+Copyright © NUnit contributors
+
+Licensed under the MIT License.
+https://github.com/nunit/nunit/blob/master/LICENSE.txt
+
+
+=============================================================
+
+Microsoft.Extensions.DependencyInjection.Abstractions
+Copyright © Microsoft
+
+Licensed under the MIT License.
+https://github.com/dotnet/runtime/blob/main/LICENSE.TXT
+
+=============================================================
