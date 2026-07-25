@@ -9,7 +9,7 @@ It allows testers to write test cases in plain English, making it easier for non
 
 It uses the shared binding from [Rotbarsch.Reqnroll.BaseBindings](https://github.com/Rotbarsch/Rotbarsch.Reqnroll.BaseBindings) for variables etc. See there for further info.
 
-**TL;DR: A set of Reqnroll Bindings for writing OPC/UA API tests in Natural Language.**
+**TL;DR: A set of Reqnroll Bindings for writing OPC/UA tests in Natural Language.**
 
 ## Minimal Usage Example
 ```
