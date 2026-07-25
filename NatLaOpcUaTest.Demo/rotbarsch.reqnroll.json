@@ -1,0 +1,24 @@
+{
+  "globalVariables": [
+    {
+      "name": "stage",
+      "value": "PROD" // This will be overwritten by the *.Development.json file
+    },
+    // This example uses the demo server of https://github.com/eclipse-milo/milo
+    {
+      "name": "demoEndpoint",
+      "value": ""
+    },
+    {
+      "name": "username",
+      "value": ""
+    },
+    {
+      "name": "password",
+      "value": ""
+    }
+  ],
+  "additionalConfigurationFiles": [
+    "./rotbarsch.reqnroll.Development.json"
+  ]
+}

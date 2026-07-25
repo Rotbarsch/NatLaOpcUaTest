@@ -1,0 +1,19 @@
+<Solution>
+  <Folder Name="/Core/">
+    <Project Path="NatLaOpcUaTest.Core.Contracts/NatLaOpcUaTest.Core.Contracts.csproj" Id="714b5a2b-ef65-451b-833b-e65e0a995916" />
+    <Project Path="NatLaOpcUaTest.Core/NatLaOpcUaTest.Core.csproj" />
+  </Folder>
+  <Folder Name="/Demo/">
+    <Project Path="NatLaOpcUaTest.Demo/NatLaOpcUaTest.Demo.csproj" Id="c416e154-c51d-4716-9c3a-884751ecc6bc" />
+  </Folder>
+  <Folder Name="/Drivers/">
+    <Project Path="NatLaOpcUaTest.Drivers.Interfaces/NatLaOpcUaTest.Drivers.Interfaces.csproj" Id="90642829-818e-4ff3-b796-0f6877970949" />
+    <Project Path="NatLaOpcUaTest.Drivers/NatLaOpcUaTest.Drivers.csproj" Id="f4c2316a-f9f2-47e0-99e8-ddd8a1c782d1" />
+  </Folder>
+  <Folder Name="/Services/">
+    <Project Path="NatLaOpcUaTest.Services.Interfaces/NatLaOpcUaTest.Services.Interfaces.csproj" Id="f0182866-ec59-4724-9a92-7ac62705f9f9" />
+    <Project Path="NatLaOpcUaTest.Services/NatLaOpcUaTest.Services.csproj" Id="c39a771a-48e9-48a9-b1f6-98d2440cfc4c" />
+  </Folder>
+  <Project Path="NatLaOpcUaTest.Bindings.Interfaces/NatLaOpcUaTest.Bindings.Interfaces.csproj" Id="69c6ab73-7a1a-43b5-8a21-b0224bbf99fa" />
+  <Project Path="NatLaOpcUaTest.Bindings/NatLaOpcUaTest.Bindings.csproj" Id="71fe05c2-459b-4dde-a3bd-487de8da1b82" />
+</Solution>

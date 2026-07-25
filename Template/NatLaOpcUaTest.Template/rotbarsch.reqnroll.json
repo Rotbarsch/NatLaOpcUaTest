@@ -1,0 +1,11 @@
+{
+  "globalVariables": [
+    {
+      "name": "stage",
+      "value": "PROD" // This will be overwritten by the *.Development.json file
+    }
+  ],
+  "additionalConfigurationFiles": [
+    "./rotbarsch.reqnroll.Development.json"
+  ]
+}

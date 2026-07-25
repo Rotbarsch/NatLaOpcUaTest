@@ -1,0 +1,69 @@
+﻿name: Release & Publish NuGet Packages
+
+on:
+  push:
+    tags:
+      - "v*.*.*"
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      # Extract version from tag (v1.2.3 → 1.2.3)
+      - name: Extract version
+        id: version
+        run: echo "VERSION=${GITHUB_REF_NAME#v}" >> $GITHUB_OUTPUT
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 8.0.x
+
+      - name: Restore
+        run: dotnet restore
+
+      - name: Build
+        run: dotnet build --configuration Release --no-restore -p:Version=${{ steps.version.outputs.VERSION }}
+
+      - name: Pack NuGet packages
+        run: dotnet pack --configuration Release --no-build -p:ContinuousIntegrationBuild=true -p:Version=${{ steps.version.outputs.VERSION }}
+
+      - name: Pack Project template
+        run: dotnet pack ./Template/NatLaOpcUaTest.Template.Package.csproj --configuration Release -p:Version=${{ steps.version.outputs.VERSION }}
+
+      - name: NuGet login (get temp api key)
+        uses: NuGet/login@v1
+        id: login
+        with:
+          user: ${{ secrets.NUGET_USER }}
+
+      - name: Publish to NuGet
+        run: dotnet nuget push "**/*.nupkg" --api-key ${{ steps.login.outputs.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json --skip-duplicate
+
+      - name: Checkout Wiki
+        uses: actions/checkout@v4
+        with:
+          repository: Rotbarsch/NatLaOpcUaTest.wiki
+          path: wiki
+          token: ${{ secrets.WIKI_TOKEN }}
+
+      - name: Generate Bindings.md
+        run: |
+          dnx -y Rotbarsch.ReqnrollDocumentationGenerator -- -i "./NatLaOpcUaTest.Demo/bin/Release/net8.0/NatLaOpcUaTest.Bindings.dll;./NatLaOpcUaTest.Demo/bin/Release/net8.0/NatLaOpcUaTest.Bindings.xml" -o "./wiki/Bindings.md"
+
+      - name: Commit and Push Bindings.md to Wiki
+        working-directory: wiki
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add Bindings.md
+          git commit -m "updated Bindings.md" || echo "No changes to commit"
+          git push
