@@ -24,9 +24,9 @@ The common bindings (Assert, Variable operations, etc) are documented in the wik
 ## Advantages of using NatLaOpcUaTest
 - **Natural Language**: Write tests in plain English, making them accessible to non-technical team members.
 - **Version control compatible**: Test cases can be easily managed and tracked using standard version control systems.
-- **Ease of Use**: Simplifies the process of creating and maintaining REST API tests.
+- **Ease of Use**: Simplifies the process of creating and maintaining OPC/UA tests.
 - **Integration with Reqnroll**: Leverages the powerful features of Reqnroll and its various integrations for REST API testing.
-- **Flexibility**: Easily adaptable to various REST API testing scenarios.
+- **Flexibility**: Easily adaptable to various OPC/UA testing scenarios.
 - **Ready for AI**: The natural language used for describing tests is well-suited for AI-driven test generation and analysis.
 
 ## Getting Started
