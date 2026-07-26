@@ -5,7 +5,7 @@ using Reqnroll;
 namespace NatLaOpcUaTest.Bindings.Actions;
 
 [Binding]
-public class NodeReadActions(INodeReadDriver nodeReadDriver) : INodeReadActions
+public class NodeReadValueActions(INodeReadDriver nodeReadDriver) : INodeReadValueActions
 {
     [When("the value of node with id '(.*)' is stored in variable '(.*)'")]
     public async Task ReadNodeById(string nodeIdentifier, string targetVariableName)
