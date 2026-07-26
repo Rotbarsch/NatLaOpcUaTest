@@ -1,12 +1,11 @@
-﻿using NatLaOpcUaTest.Bindings.Interfaces.Setup;
-using NatLaOpcUaTest.Drivers.Interfaces;
+﻿using NatLaOpcUaTest.Drivers.Interfaces;
 using NUnit.Framework;
 using Reqnroll;
 
 namespace NatLaOpcUaTest.Bindings.Setup;
 
 [Binding]
-public class ConnectionSetupBindings(IConnectionConfigurationDriver connectionConfigurationDriver): IConnectionSetupBindings
+public class ConnectionSetupBindings(IConnectionConfigurationDriver connectionConfigurationDriver)
 {
     [Given("the application name '(.*)'")]
     public void SetApplicationName(string applicationName)

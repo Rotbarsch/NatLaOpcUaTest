@@ -1,11 +1,10 @@
-﻿using NatLaOpcUaTest.Bindings.Interfaces.Actions;
-using NatLaOpcUaTest.Drivers.Interfaces;
+﻿using NatLaOpcUaTest.Drivers.Interfaces;
 using Reqnroll;
 
 namespace NatLaOpcUaTest.Bindings.Actions;
 
 [Binding]
-public class NodeReadValueActions(INodeReadDriver nodeReadDriver) : INodeReadValueActions
+public class NodeReadValueActions(INodeReadDriver nodeReadDriver)
 {
     [When("the value of node with id '(.*)' is stored in variable '(.*)'")]
     public async Task ReadNodeById(string nodeIdentifier, string targetVariableName)

@@ -14,6 +14,5 @@
     <Project Path="NatLaOpcUaTest.Services.Interfaces/NatLaOpcUaTest.Services.Interfaces.csproj" Id="f0182866-ec59-4724-9a92-7ac62705f9f9" />
     <Project Path="NatLaOpcUaTest.Services/NatLaOpcUaTest.Services.csproj" Id="c39a771a-48e9-48a9-b1f6-98d2440cfc4c" />
   </Folder>
-  <Project Path="NatLaOpcUaTest.Bindings.Interfaces/NatLaOpcUaTest.Bindings.Interfaces.csproj" Id="69c6ab73-7a1a-43b5-8a21-b0224bbf99fa" />
   <Project Path="NatLaOpcUaTest.Bindings/NatLaOpcUaTest.Bindings.csproj" Id="71fe05c2-459b-4dde-a3bd-487de8da1b82" />
 </Solution>

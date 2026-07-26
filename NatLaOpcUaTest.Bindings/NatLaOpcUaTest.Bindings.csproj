@@ -30,7 +30,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\NatLaOpcUaTest.Bindings.Interfaces\NatLaOpcUaTest.Bindings.Interfaces.csproj" />
     <ProjectReference Include="..\NatLaOpcUaTest.Core\NatLaOpcUaTest.Core.csproj" />
     <ProjectReference Include="..\NatLaOpcUaTest.Drivers.Interfaces\NatLaOpcUaTest.Drivers.Interfaces.csproj" />
   </ItemGroup>
