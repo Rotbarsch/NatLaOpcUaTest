@@ -23,7 +23,6 @@
 
   <ItemGroup>
     <PackageReference Include="NJsonSchema" Version="11.5.2" />
-    <PackageReference Include="NUnit" Version="3.13.1" />
     <PackageReference Include="Rotbarsch.Reqnroll.Services.Interfaces" Version="0.26.725" />
   </ItemGroup>
 
