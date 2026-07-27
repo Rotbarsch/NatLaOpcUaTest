@@ -7,7 +7,6 @@ public static class ServiceCollectionExtensions
 {
     public static IServiceCollection RegisterNatLaOpcUaTestDrivers(this IServiceCollection serviceCollection)
     {
-
         serviceCollection
             .AddScoped<IConnectionConfigurationDriver, ConnectionConfigurationConfigurationDriver>()
             .AddScoped<INodeReadDriver, NodeReadDriver>();

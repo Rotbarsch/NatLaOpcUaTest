@@ -18,14 +18,16 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Include="../THIRD-PARTY-NOTICES.txt"
-          Pack="true"
-          PackagePath="" />
+    <None Include="../THIRD-PARTY-NOTICES.txt" Pack="true" PackagePath="" />
   </ItemGroup>
 
   <ItemGroup>
     <None Include="..\README.md" Pack="true" PackagePath="\" />
     <None Include="..\icon.png" Pack="true" PackagePath="\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="OPCFoundation.NetStandard.Opc.Ua.Types" Version="1.5.378.156" />
   </ItemGroup>
 
 </Project>

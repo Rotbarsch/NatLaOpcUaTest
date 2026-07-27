@@ -108,20 +108,55 @@ internal partial class OpcUaConnectionService : IOpcUaConnectionService, IDispos
         return _session;
     }
 
-    private async Task<ReferenceDescriptionCollection> GetChildrenAsync(string nodeId)
+    private async Task<IList<(Node node, string statusCode)>> GetChildrenAsync(NodeId nodeId)
     {
-        var browser = new Browser(await GetSession())
+        var session = await GetSession();
+
+        var browser = new Browser(session)
         {
             BrowseDirection = BrowseDirection.Forward,
             ReferenceTypeId = ReferenceTypeIds.HierarchicalReferences,
             IncludeSubtypes = true
         };
 
-        return await browser.BrowseAsync(NodeId.Parse(nodeId));
+        var references = await browser.BrowseAsync(nodeId);
+
+        var nodeIds = new NodeIdCollection(references.Select(r => ExpandedNodeId.ToNodeId(r.NodeId, session.NamespaceUris)));
+        var (nodes, statusCodes) = await session.ReadNodesAsync(nodeIds);
+
+        return nodes
+            .Zip(statusCodes, (node, status) => (node, status.StatusCode.ToString()))
+            .ToList();
     }
 
     public void Dispose()
     {
         _session?.Dispose();
+    }
+
+    private async Task<NodeId?> GetNodeIdentifierFromPath(string nodePath, bool throwIfNotFound=true)
+    {
+        var segments = nodePath.Split(
+            '/',
+            StringSplitOptions.RemoveEmptyEntries);
+
+        NodeId current = ObjectIds.RootFolder;
+
+        foreach (var segment in segments)
+        {
+            var children = await GetChildrenAsync(current);
+
+            var match = children.SingleOrDefault(c => c.node.BrowseName?.Name == segment);
+
+            if (match.node is null)
+            {
+                if(throwIfNotFound) throw new InvalidOperationException($"Path segment '{segment}' not found.");
+                return null;
+            }
+
+            current = match.node.NodeId;
+        }
+
+        return current;
     }
 }
