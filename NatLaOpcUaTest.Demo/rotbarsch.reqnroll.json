@@ -7,15 +7,15 @@
     // This example uses the demo server of https://github.com/eclipse-milo/milo
     {
       "name": "demoEndpoint",
-      "value": ""
+      "value": "opc.tcp://milo.digitalpetri.com:62541/milo"
     },
     {
       "name": "username",
-      "value": ""
+      "value": "User"
     },
     {
       "name": "password",
-      "value": ""
+      "value": "password"
     }
   ],
   "additionalConfigurationFiles": [
