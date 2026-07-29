@@ -9,7 +9,8 @@ public static class ServiceCollectionExtensions
     {
         serviceCollection
             .AddScoped<IConnectionConfigurationDriver, ConnectionConfigurationConfigurationDriver>()
-            .AddScoped<INodeReadDriver, NodeReadDriver>();
+            .AddScoped<INodeReadDriver, NodeReadDriver>()
+            .AddScoped<INodeWriteDriver, NodeWriteDriver>();
         
         return serviceCollection;
     }

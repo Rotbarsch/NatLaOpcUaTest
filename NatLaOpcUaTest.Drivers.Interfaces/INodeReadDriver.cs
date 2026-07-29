@@ -3,7 +3,6 @@
 public interface INodeReadDriver
 {
     Task ReadNodeById(string nodeIdentifier, string targetVariableName);
-
     Task ReadNodeByPath(string nodePath, string targetVariableName);
     Task<bool> CheckNodeExistsById(string nodeIdentifier);
     Task<bool> CheckNodeExistsByPath(string path);

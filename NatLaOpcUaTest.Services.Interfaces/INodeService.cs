@@ -12,4 +12,6 @@ public interface INodeService
     Task<NodeInfo> GetNodeInfoByPath(string path);
     Task<IEnumerable<NodeInfo>> GetChildrenOfNodeById(string nodeIdentifier);
     Task<IEnumerable<NodeInfo>> GetChildrenOfNodeByPath(string path);
+    Task WriteNodeById(string nodeIdentifier, string newValue);
+    Task WriteNodeByPath(string nodePath, string newValue);
 }

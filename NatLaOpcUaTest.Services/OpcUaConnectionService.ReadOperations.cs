@@ -1,4 +1,5 @@
-﻿using NatLaOpcUaTest.Core.Contracts;
+﻿using System.Text;
+using NatLaOpcUaTest.Core.Contracts;
 using Newtonsoft.Json;
 using NUnit.Framework;
 using Opc.Ua;
@@ -118,12 +119,16 @@ internal partial class OpcUaConnectionService
 
         if (nodeValue.Value is ExtensionObject eo)
         {
-            toSerialize = eo.Body;
+            toSerialize = eo.Body is byte[] bytes
+                ? JsonConvert.DeserializeObject(Encoding.UTF8.GetString(bytes))
+                : eo.Body;
         }
 
         if (nodeValue.Value is ExtensionObject[] eoa)
         {
-            toSerialize = eoa.Select(x => x.Body);
+            toSerialize = eoa.Select(x => x.Body is byte[] b
+                ? JsonConvert.DeserializeObject(Encoding.UTF8.GetString(b))
+                : x.Body);
         }
 
         return JsonConvert.SerializeObject(toSerialize);

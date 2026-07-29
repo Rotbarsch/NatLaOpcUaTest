@@ -12,4 +12,6 @@ public interface IOpcUaConnectionService
     Task<NodeInfo> GetNodeInfoByPath(string path);
     Task<IEnumerable<NodeInfo>> GetChildrenOfNodeById(string nodeIdentifier);
     Task<IEnumerable<NodeInfo>> GetChildrenOfNodeByPath(string path);
+    Task WriteNodeValueById(string nodeIdentifier, string newValue);
+    Task WriteNodeValueByPath(string nodePath, string newValue);
 }
