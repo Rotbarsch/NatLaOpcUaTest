@@ -54,4 +54,14 @@ internal class NodeService(IOpcUaConnectionService opcUaConnectionService) : INo
     {
         await opcUaConnectionService.WriteNodeValueByPath(nodePath, newValue);
     }
+
+    public async Task<string?> InvokeMethodById(string nodeIdentifier, IEnumerable<MethodInvocationParameter>? parameters)
+    {
+        return await opcUaConnectionService.InvokeMethodById(nodeIdentifier, parameters);
+    }
+
+    public async Task<string?> InvokeMethodByPath(string nodePath, IEnumerable<MethodInvocationParameter>? parameters)
+    {
+        return await opcUaConnectionService.InvokeMethodByPath(nodePath, parameters);
+    }
 }

@@ -1,5 +1,6 @@
 ﻿using System.Text;
 using System.Text.Json;
+using NatLaOpcUaTest.Core.Contracts;
 using Newtonsoft.Json.Linq;
 using Opc.Ua;
 using Opc.Ua.Client;

@@ -14,4 +14,6 @@ public interface IOpcUaConnectionService
     Task<IEnumerable<NodeInfo>> GetChildrenOfNodeByPath(string path);
     Task WriteNodeValueById(string nodeIdentifier, string newValue);
     Task WriteNodeValueByPath(string nodePath, string newValue);
+    Task<string?> InvokeMethodById(string nodeIdentifier, IEnumerable<MethodInvocationParameter>? parameters);
+    Task<string?> InvokeMethodByPath(string nodePath, IEnumerable<MethodInvocationParameter>? parameters);
 }

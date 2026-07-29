@@ -14,4 +14,6 @@ public interface INodeService
     Task<IEnumerable<NodeInfo>> GetChildrenOfNodeByPath(string path);
     Task WriteNodeById(string nodeIdentifier, string newValue);
     Task WriteNodeByPath(string nodePath, string newValue);
+    Task<string?> InvokeMethodById(string nodeIdentifier, IEnumerable<MethodInvocationParameter>? parameters);
+    Task<string?> InvokeMethodByPath(string nodePath, IEnumerable<MethodInvocationParameter>? parameters);
 }
